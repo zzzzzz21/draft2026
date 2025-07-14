@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title><%- title %>｜スカイＡ｜CS放送のスポーツチャンネル</title>
+    <meta
+      name="description"
+      content="プロ野球（阪神タイガース主催の公式戦、オープン戦、ファーム戦）や大学野球、夏の高校野球、ゴルフ、スポーツクライミングなど豊富なスポーツ番組を重点的に放送しています。さらに釣りやボウリング、また探偵！ナイトスクープなどの人気番組も彩りを添えています。"
+    />
+    <meta name="keywords" content="阪神タイガース,スポーツチャンネル,CS放送,スカパー,ケーブルテレビ,ゴルフ,ボウリング,スポーツクライミング、Gift of Aloha ラン＆ライド、BLADE" />
+    <!-- OG START -->
+    <meta property="og:title" content="<%- title %>｜特集｜スカイＡ｜CS放送のスポーツチャンネル" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:description"
+      content="プロ野球（阪神タイガース主催の公式戦、オープン戦、ファーム戦）や大学野球、夏の高校野球、ゴルフ、スポーツクライミングなど豊富なスポーツ番組を重点的に放送しています。さらに釣りやボウリング、また探偵！ナイトスクープなどの人気番組も彩りを添えています。"
+    />
+    <meta property="og:image" content="https://sky-a.asahi.co.jp/img/ogimage.png?20160401" />
+
+    <meta property="og:url" content="https://sky-a.asahi.co.jp/special/draft2024/" />
+    <!-- OG END -->
+    <link rel="shortcut icon" type="image/icon" href="https://sky-a.asahi.co.jp/img/common/favicon.ico?20160401" />
+    <link rel="shortcut icon" href="https://sky-a.asahi.co.jp/img/common/favicon.ico?20160401" />
+    <!--[if lt IE 9]>
+      <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="https://sky-a.asahi.co.jp/css/common.css" />
+    <link rel="stylesheet" media="all" href="https://sky-a.asahi.co.jp/css/special.css" />
+    <link rel="stylesheet" href="https://sky-a.asahi.co.jp/css/style_pc.css" />
+    <link rel="stylesheet" media="all" href="https://sky-a.asahi.co.jp/css/special_detail.css?v2" />
+    <script src="https://sky-a.asahi.co.jp/js/jquery.js"></script>
+    <!--[if lt IE 10]>
+      <script type="text/javascript" src="/js/jquery.ah-placeholder.js"></script>
+    <![endif]-->
+    <script src="https://sky-a.asahi.co.jp/js/common.js"></script>
+    <link rel="stylesheet" href="<%- stylesheet %>" />
+    <!-- Google Tag Manager -->
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <div id="wrapper">
+      <%- include('../partials/header') %>
+      <div id="contents">
+        <div id="contents-inner">
+          <%- include('../partials/breadcrumb') %>
+          <div id="contWarp">
+            <div id="main" class="clearfix">
+              <div class="contHead clearfix">
+                <h1 class="headStyle">2022年10月20日 未来のスター選手誕生</h1>
+              </div>
+              <div class="main-contents no-right">
+                <!-- #コンテンツエリア-->
+                <%- content %>
+                <!-- /#コンテンツエリア-->
+              </div>
+            </div>
+            <!-- #main -->
+          </div>
+          <!-- #contWrap -->
+        </div>
+        <!-- #contents-inner -->
+      </div>
+      <!-- #contents -->
+      <%- include('../partials/footer') %>
+    </div>
+  </body>
+</html>

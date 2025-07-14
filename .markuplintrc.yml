@@ -1,0 +1,7 @@
+parser:
+  .ejs$: '@markuplint/ejs-parser'
+parserOptions:
+  ignoreFrontMatter: true
+rules:
+  attr-duplitation: true
+  deprecated-attr: true

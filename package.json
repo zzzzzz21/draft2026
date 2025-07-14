@@ -1,0 +1,69 @@
+{
+  "name": "skya_itadakimeshi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-p watch",
+    "build": "run-p build:*",
+    "build:ejs": "npx @11ty/eleventy --config=eleventy.config.js --quiet",
+    "build:sass": "run-s build:sass:*",
+    "build:sass:compile": "sass src/styles:dist/css/ --no-source-map",
+    "build:js": "webpack --mode=production",
+    "build:sharp": "node sharp.mjs",
+    "lint": "run-p lint:*",
+    "lint:sass": "stylelint src/styles/**/*.scss",
+    "lint:markup": "markuplint src/html/**/*.ejs",
+    "lint:js": "eslint -c .eslintrc.yml src/scripts/**/*.js",
+    "watch": "run-p watch:*",
+    "watch:ejs": "npm run build:ejs -- --watch --incremental",
+    "watch:sass": "run-s watch:sass:*",
+    "watch:sass:compile": "npm run build:sass:compile -- -w",
+    "watch:js": "npm run build:js -- --watch",
+    "watch:sharp": "onchange -i \"src/images\" -- npm run build:sharp",
+    "watch:server": "browser-sync start --config bs-config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzzzzz21/skya_draft2025.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zzzzzz21/skya_draft2025/issues"
+  },
+  "homepage": "https://github.com/zzzzzz21/skya_draft2025#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.21.8",
+    "@babel/plugin-transform-modules-commonjs": "^7.21.5",
+    "@babel/preset-env": "^7.21.5",
+    "@markuplint/ejs-parser": "^3.7.0",
+    "babel-loader": "^9.1.2",
+    "browser-sync": "^2.29.3",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard": "^17.0.0",
+    "markuplint": "^3.10.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "prettier": "^2.8.8",
+    "sass": "^1.62.1",
+    "sharp": "^0.32.1",
+    "stylelint": "^15.6.2",
+    "stylelint-config-recommended-scss": "^11.0.0",
+    "stylelint-config-standard": "^33.0.0",
+    "stylelint-prettier": "^3.0.0",
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1"
+  },
+  "dependencies": {
+    "micromodal": "^0.4.10"
+  },
+  "volta": {
+    "node": "18.16.0",
+    "npm": "9.5.1"
+  }
+}

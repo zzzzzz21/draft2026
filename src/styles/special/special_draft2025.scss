@@ -175,13 +175,13 @@ div#main {
       }
 
       &:hover {
-        background: #0099ff;
-        color: white;
-        opacity: inherit;
+        // background: #0099ff;
+        // color: white;
+        // opacity: inherit;
 
-        &::before {
-          background: #fff;
-        }
+        // &::before {
+        //   background: #fff;
+        // }
 
         &::after {
           border-top: 2px solid #0099ff;

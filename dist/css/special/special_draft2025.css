@@ -270,6 +270,7 @@ div#main {
 .draft .links {
   display: flex;
   justify-content: space-between;
+  gap: 0 60px;
 }
 .draft .links .link {
   width: calc((100% - 60px) / 2);
@@ -394,7 +395,6 @@ div#main {
 }
 .draft .road_to_draft .program-column-title {
   align-items: center;
-  display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
 }
@@ -424,8 +424,8 @@ div#main {
 .draft .top-present {
   position: relative;
   display: block;
-  width: 300px;
-  margin: 25px auto;
+  width: auto;
+  margin: 25px 0;
   text-align: center;
   font-size: 16px;
   padding: 1em 2em;

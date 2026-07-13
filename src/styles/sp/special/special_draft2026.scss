@@ -670,6 +670,23 @@ footer {
     img {
       pointer-events: none; /* PCドラッグ時のバグ防止 */
     }
+    &.-focus {
+      .player-card-name {
+        position: relative;
+        &:before {
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: block;
+          content: '';
+          background: url('/img/special/draft2026/icon_toritani.png') left center no-repeat;
+          background-size: 100% auto;
+          width: calc((132 / 640) * 100vw);
+          height: calc((104 / 640 ) * 100vw);
+        }
+      }
+    }
+
   }
 
   .player-card-image {

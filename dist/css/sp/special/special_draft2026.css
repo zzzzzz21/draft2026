@@ -616,6 +616,20 @@ footer {
 .draft .player-card img {
   pointer-events: none; /* PCドラッグ時のバグ防止 */
 }
+.draft .player-card.-focus .player-card-name {
+  position: relative;
+}
+.draft .player-card.-focus .player-card-name:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  content: "";
+  background: url("/img/special/draft2026/icon_toritani.png") left center no-repeat;
+  background-size: 100% auto;
+  width: 20.625vw;
+  height: 16.25vw;
+}
 .draft .player-card-image {
   width: 100%;
   height: auto;

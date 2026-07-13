@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    draft2024: './src/scripts/draft2024.js',
+    draft2026: './src/scripts/draft2026.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist/js/special'),

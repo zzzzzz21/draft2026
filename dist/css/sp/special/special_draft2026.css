@@ -1,0 +1,1194 @@
+@charset "UTF-8";
+.social {
+  background: #dcd9dc;
+  margin-top: -1px;
+}
+
+footer {
+  margin-top: 0;
+}
+
+.banner-howto {
+  background: #dcd9dc;
+  margin-top: -1px;
+  padding: 20px 0 90px;
+}
+.banner-howto .cmn-btn.cmn-btn-logo {
+  margin-top: 0;
+}
+
+.is-pc {
+  display: none;
+}
+
+.draft {
+  line-height: 1.6;
+  position: relative;
+  /*=========================================================*/
+  /* .fixed-banner
+  /*=========================================================*/
+  /*=========================================================*/
+  /* 直近の放送情報／お知らせ */
+  /*=========================================================*/
+  /*=========================================================*/
+  /* .c-pageNavigation ページ内ナビゲーション */
+  /*=========================================================*/
+  /*=========================================================*/
+  /* .c-pickup PICKUP */
+  /*=========================================================*/
+  /*=========================================================*/
+  /* .player 注目の選手（既存ベース＋カルーセル最適化） */
+  /*=========================================================*/
+  /* タイトルとナビは中央寄せを維持するために既存のインナー幅を適用 */
+  /* --- カルーセルラッパー --- */
+  /* --- 左右のナビゲーション矢印ボタン --- */
+  /*=========================================================*/
+  /* .c-movies  */
+  /*=========================================================*/
+  /*=========================================================*/
+  /* .c-backnumber */
+  /*=========================================================*/
+}
+.draft .top-title img {
+  margin: 0 auto;
+  width: 100%;
+}
+.draft .fixed-banner {
+  position: fixed;
+  right: 20px; /* 画面右端からの距離（SP時は適宜調整） */
+  bottom: 20px; /* 画面下端からの距離 */
+  z-index: 100; /* 他のコンテンツより前面に配置 */
+  max-width: 280px; /* バナーの最大幅（バナー画像に合わせて調整してください） */
+  width: 45%; /* レスポンシブ用（SPで大きすぎないように） */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: none; /* JSでの判定後に表示するため初期状態は非表示 */
+  /* --- 「×」閉じるボタンのスタイル --- */
+}
+.draft .fixed-banner.is-show {
+  display: block;
+}
+.draft .fixed-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.draft .fixed-banner-close {
+  position: absolute;
+  top: -12px; /* バナーの少し上にはみ出させて押しやすく配置 */
+  right: -12px; /* バナーの少し右にはみ出させて配置 */
+  width: 26px;
+  height: 26px;
+  background: #000;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 0;
+}
+.draft .fixed-banner-close::before, .draft .fixed-banner-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 2px;
+  background-color: #fff;
+}
+.draft .fixed-banner-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.draft .fixed-banner-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.draft .fixed-banner-close:hover {
+  background: #333;
+}
+.draft .c-information {
+  font-size: 3.75vw;
+  margin: 0 auto;
+  text-align: center;
+  width: 90.9375bw;
+}
+.draft .c-information__title {
+  position: relative;
+  display: block;
+  width: auto;
+  margin: 0 0 25px;
+  text-align: center;
+  font-size: 4.125vw;
+  padding: 0.6em 1em;
+  color: #fff;
+  background: #f00;
+  font-weight: bold;
+  border-radius: 0.5em;
+}
+.draft .c-information__title::after {
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  pointer-events: none;
+  position: absolute;
+  border-color: rgba(0, 153, 255, 0);
+  border-top-width: 10px;
+  border-bottom-width: 10px;
+  border-left-width: 10px;
+  border-right-width: 10px;
+  margin-left: -10px;
+  border-top-color: #f00;
+  top: 100%;
+  left: 50%;
+}
+.draft .c-information a {
+  color: #06f;
+  transition: 0.3s all ease-in-out;
+}
+.draft .c-information a:link, .draft .c-information a:visited {
+  text-decoration: underline;
+}
+.draft .c-information a:hover {
+  color: #333;
+  text-decoration: none;
+  opacity: 1;
+}
+.draft .c-pageNavigation {
+  background: #000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px -10px 0;
+}
+.draft .c-pageNavigation__item {
+  border-left: 1px solid #999;
+  box-sizing: border-box;
+  color: #FFF;
+  text-align: center;
+  width: 50%;
+  padding: 1em 0;
+}
+.draft .c-pageNavigation__item:first-child {
+  border: none;
+}
+.draft .c-pageNavigation__item:nth-child(3) {
+  border-left: none;
+}
+.draft .c-pageNavigation__item:nth-child(n+3) {
+  border-top: 1px solid #999;
+}
+.draft .c-pageNavigation__link {
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+}
+.draft .c-pageNavigation__link:hover {
+  color: inherit;
+}
+.draft .c-pageNavigation__icon {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.draft .c-pageNavigation__icon img {
+  max-height: 6.25vw;
+  width: auto;
+  margin: 0 auto 2.5vw;
+}
+.draft .top-present {
+  position: relative;
+  display: block;
+  width: auto;
+  margin: 38px auto;
+  text-align: center;
+  font-size: 16px;
+  padding: 1em 2em;
+  color: #fff;
+  background: #0067fe;
+  font-weight: bold;
+  border-radius: 0.5em;
+}
+.draft .top-present::after {
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  pointer-events: none;
+  position: absolute;
+  border-color: rgba(0, 153, 255, 0);
+  border-top-width: 10px;
+  border-bottom-width: 10px;
+  border-left-width: 10px;
+  border-right-width: 10px;
+  margin-left: -10px;
+  border-top-color: #0067fe;
+  top: 100%;
+  left: 50%;
+}
+.draft .heading-img {
+  margin: 0 auto 20px;
+  width: 30%;
+}
+.draft .heading-title {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.7;
+  padding-top: 12px;
+}
+.draft .center {
+  text-align: center !important;
+}
+.draft .head-icon img {
+  height: auto;
+  margin: 0 auto;
+  width: 90px;
+}
+.draft .content-block.head {
+  padding: 35px 10px 0;
+}
+.draft .content-block.beige {
+  background: #f4f0eb;
+}
+.draft .content-block.gray {
+  background: #dadceb;
+}
+.draft .content-block.light-blue {
+  background: #e5edf9;
+}
+.draft .content-block.sky-blue {
+  background: #aecff5;
+}
+.draft .content-block.green {
+  background: #006666;
+  color: #fff;
+}
+.draft .content-block.green a {
+  color: #fff;
+}
+.draft .content-block.red {
+  color: #000;
+  background: #ff0000;
+  padding: 60px 0;
+}
+.draft .content-block.red .heading-title {
+  margin-top: 0;
+  font-size: 26px;
+}
+.draft .content-block.red .heading-title span {
+  font-size: 18px;
+  color: #fff;
+}
+.draft .content-block.dark-gray {
+  color: #fff;
+  background: #333333;
+}
+.draft .content-block.light-gray {
+  background: #c8cbda;
+}
+.draft .content-block.stripe-bg {
+  width: 100%;
+  background-color: #06f; /* ベースとなる濃い青色 */
+  background-image: repeating-linear-gradient(-45deg, #07f, #07f 6px, transparent 6px, transparent 12px);
+}
+.draft .content-block .links .link:nth-child(n+2) {
+  margin-top: 2em;
+}
+.draft .content-block .links .link-content-logo {
+  margin-right: auto;
+  margin-left: auto;
+}
+.draft .content-block .links .link-content-logo img {
+  width: 88px;
+  height: auto;
+  border-radius: 50%;
+  margin: auto;
+}
+.draft .c-pickup {
+  width: 90.625%;
+  margin: 0 auto;
+  padding: 22px 0 40px;
+}
+.draft .c-pickup-title {
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.4;
+  margin-bottom: 1em;
+  padding-left: 86px;
+  background: url("../../../img/special/draft2026/icon_pickup.png") left top no-repeat;
+  background-size: 72px auto;
+}
+.draft .c-pickup-title span {
+  display: block;
+  font-size: 32px;
+  font-weight: bold;
+}
+.draft .c-pickup-navi {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75vw;
+}
+.draft .c-pickup-navi__item {
+  display: flex;
+  width: 100%;
+  /* --- 1. 画像エリア --- */
+  /* --- 2. キャプションエリア --- */
+  /* --- 3. タイトルエリア --- */
+  /* --- 4. 共通の黒バッジ設定 --- */
+  /* --- 5. タイトルテキスト --- */
+  /* --- 6. 本文・下部テキストエリア --- */
+  /* --- 7. 【動画用レイアウト】 --- */
+}
+.draft .c-pickup-navi__item__body {
+  display: grid;
+  grid-template-columns: 45% 1fr;
+  column-gap: 5%;
+  row-gap: 0;
+  text-decoration: none;
+  padding: 16px;
+  border-radius: 16px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  /* 【修正】aタグをレイアウトから透過させ、中身を直接グリッドの子にする */
+  /* --- 背景色の設定 --- */
+}
+.draft .c-pickup-navi__item__body > a {
+  display: contents;
+  text-decoration: none;
+  color: inherit;
+}
+.draft .c-pickup-navi__item__body.-player {
+  background: #aecff5;
+  color: #000;
+}
+.draft .c-pickup-navi__item__body.-movie {
+  background: #e3e7eb;
+  color: #000;
+}
+.draft .c-pickup-navi__item__body.-column {
+  background: #333;
+  color: #fff;
+}
+.draft .c-pickup-navi__item__body.-column figcaption {
+  color: #9ca3af;
+}
+.draft .c-pickup-navi__item__photo {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
+  padding: 0;
+}
+.draft .c-pickup-navi__item__photo img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+}
+.draft .c-pickup-navi__item__photo figcaption {
+  height: 24px;
+  line-height: 24px;
+  font-size: 0.75rem;
+  margin-top: 4px;
+  color: #666;
+  text-align: left;
+}
+.draft .c-pickup-navi__item h3,
+.draft .c-pickup-navi__item .c-pickup-navi__item__body > a > span {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  padding-top: 32px;
+  position: relative;
+  box-sizing: border-box;
+}
+.draft .c-pickup-navi__item h3::before,
+.draft .c-pickup-navi__item .c-pickup-navi__item__body.-movie a > p span::before,
+.draft .c-pickup-navi__item .c-pickup-navi__item__body > a > span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% + 20px);
+  height: 24px;
+  line-height: 24px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding-left: 8px;
+  box-sizing: border-box;
+  border-radius: 2px 0 0 2px;
+  background: #000;
+}
+.draft .c-pickup-navi__item .c-pickup-navi__item__body.-player h3::before {
+  content: "注目選手";
+}
+.draft .c-pickup-navi__item .c-pickup-navi__item__body.-movie a > p span::before {
+  content: "動画";
+}
+.draft .c-pickup-navi__item .c-pickup-navi__item__body.-column > a > span::before {
+  content: "コラム";
+}
+.draft .c-pickup-navi__item h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+.draft .c-pickup-navi__item h3 span {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: normal;
+  margin-top: 4px;
+  color: inherit;
+}
+.draft .c-pickup-navi__item .c-pickup-navi__item__body > a > span {
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.3;
+  display: block;
+}
+.draft .c-pickup-navi__item .content-text,
+.draft .c-pickup-navi__item .c-pickup-navi__item__body.-column > a > div {
+  grid-column: 1/span 2;
+  grid-row: 2;
+  margin-top: 12px;
+  font-size: inherit;
+}
+.draft .c-pickup-navi__item .content-text strong br {
+  display: none;
+}
+.draft .c-pickup-navi__item .c-pickup-navi__item__body.-column > a > div {
+  font-size: inherit;
+  font-weight: normal;
+  color: inherit;
+}
+.draft .c-pickup-navi__item .c-pickup-navi__item__body.-column > a > div ruby {
+  font-size: 1.4em;
+}
+.draft .c-pickup-navi__item .c-pickup-navi__item__body.-column > a > div p {
+  margin: 1em 0 0 0;
+  line-height: 1.6;
+}
+.draft .c-pickup-navi__item .c-pickup-navi__item__body.-movie > a > p {
+  grid-column: 1/span 2;
+  grid-row: 2;
+  margin-top: 12px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.draft .c-pickup-navi__item .c-pickup-navi__item__body.-movie > a > p span {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 50%;
+  padding-right: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.3;
+  color: #000;
+  display: block;
+  padding-top: 32px;
+  box-sizing: border-box;
+}
+.draft .player {
+  width: 100%; /* はみ出し領域を見せるため、コンテナ自体は100%に */
+  margin: 0 auto;
+  padding: 22px 0 40px;
+  overflow: hidden; /* 画面外の完全なはみ出しを防ぐ */
+}
+.draft .player-title,
+.draft .player-navi {
+  width: 90.625%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.draft .player-title-category {
+  width: 90.625%;
+  margin: 0 auto;
+}
+.draft .player-title {
+  align-items: center;
+  font-size: 20px;
+  line-height: 1.4;
+  display: flex;
+}
+.draft .player-title::before {
+  content: "";
+  background: url("../../../img/special/draft2026/icon2.png") left top no-repeat;
+  background-size: 100%;
+  height: 42.5px;
+  margin: 10px 10px 0 0;
+  width: 47px;
+}
+.draft .player-navi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 14px auto 0;
+  padding: 0;
+  list-style: none;
+}
+.draft .player-navi__item {
+  margin: 0 0 12px 0;
+  width: 30%;
+}
+.draft .player-navi__link {
+  align-items: center;
+  background: #fff;
+  font-size: 12px;
+  letter-spacing: 1px;
+  min-height: 36px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-left: 10px;
+  text-decoration: none;
+  color: #333;
+  border-radius: 4px;
+  /* アクティブ時のスタイル例 */
+}
+.draft .player-navi__link.-active {
+  background: #333;
+  color: #fff;
+}
+.draft .player-navi__link.-active::before {
+  background: #fff;
+}
+.draft .player-navi__link.-active::after {
+  border-color: #333;
+}
+.draft .player-navi__link::before, .draft .player-navi__link::after {
+  position: absolute;
+  content: "";
+  margin: auto;
+}
+.draft .player-navi__link::before {
+  background: #ccc;
+  border-radius: 50%;
+  bottom: 0;
+  left: 12px;
+  top: 0;
+  vertical-align: middle;
+  width: 17px;
+  height: 17px;
+}
+.draft .player-navi__link::after {
+  top: 0;
+  bottom: 0;
+  left: 17px;
+  vertical-align: middle;
+  width: 5px;
+  height: 5px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-radius: 1px;
+  transform: rotate(135deg);
+}
+.draft .player-carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 0 48px;
+  box-sizing: border-box;
+}
+.draft .player-cards {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+  width: 100%;
+  user-select: none;
+  cursor: grab;
+}
+.draft .player-cards:active {
+  cursor: grabbing;
+}
+.draft .player-card {
+  flex: 0 0 calc(100% - 16px);
+  width: calc(100% - 16px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.draft .player-card img {
+  pointer-events: none; /* PCドラッグ時のバグ防止 */
+}
+.draft .player-card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.draft .player-card-copy {
+  color: #999999;
+  font-size: 10px;
+  margin: 4px 0 0;
+  text-align: right;
+}
+.draft .player-card-name {
+  font-size: 18px;
+  margin: 8px 0 0;
+}
+.draft .player-card-name span {
+  font-size: 14px;
+  font-weight: normal;
+}
+.draft .player-card-text {
+  margin: 12px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.draft .player-card-text strong {
+  display: block;
+  margin: 8px 0;
+  font-size: 18px;
+}
+.draft .player-card-text strong + br {
+  display: none;
+}
+.draft .player-card-button, .draft .c-movies-button {
+  display: block;
+  background: #000;
+  color: #fff;
+  margin: auto auto 0;
+  max-width: 60%;
+  padding: 1em 4em;
+  text-align: center;
+  position: relative; /* 矢印（絶対配置）の基準点として追加 */
+  text-decoration: none;
+}
+.draft .player-card-button::after, .draft .c-movies-button::after {
+  content: "";
+  position: absolute;
+  right: 0.8em;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transition: right 0.3s ease-in-out;
+}
+.draft .player-card-button:hover, .draft .c-movies-button:hover {
+  opacity: 0.7;
+  transition: 0.3s all ease-in-out;
+}
+.draft .player-card-button:hover::after, .draft .c-movies-button:hover::after {
+  right: 0.4em;
+}
+.draft .player-carousel-btn {
+  position: absolute;
+  top: 170px; /* 画像の中央付近にくるよう調整（環境に合わせて変更してください） */
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background-color 0.2s;
+  /* 最初と最後のページの時にボタンを半透明にする、または非表示にする場合 */
+}
+.draft .player-carousel-btn:focus {
+  outline: none;
+}
+.draft .player-carousel-btn::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-top: 2.5px solid #fff;
+  border-right: 2.5px solid #fff;
+}
+.draft .player-carousel-btn.-prev {
+  left: 16px;
+}
+.draft .player-carousel-btn.-prev::after {
+  transform: rotate(-135deg);
+  margin-left: 3px;
+}
+.draft .player-carousel-btn.-next {
+  right: 16px;
+}
+.draft .player-carousel-btn.-next::after {
+  transform: rotate(45deg);
+  margin-right: 3px;
+}
+.draft .player-carousel-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.draft .c-movies {
+  width: 90.625%;
+  margin: 0 auto;
+  padding: 22px 0 40px;
+}
+.draft .c-movies-title {
+  align-items: center;
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 10px 0 1em;
+  display: flex;
+}
+.draft .c-movies-title::before {
+  content: "";
+  background: url("/img/special/draft2026/icon_movies.png") left top no-repeat;
+  background-size: 100%;
+  height: 42px;
+  margin: 0 10px 0 0;
+  width: 47px;
+}
+.draft .c-moviesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+.draft .c-moviesList__item:nth-child(n+2) {
+  border-top: 1px solid #333;
+  padding-top: 2em;
+}
+.draft .c-moviesList a img {
+  margin-bottom: 1.6em;
+}
+.draft .c-movies-button {
+  margin-top: 3em;
+}
+.draft .program {
+  width: 90.625%;
+  margin: 0 auto;
+  padding: 28px 0 54px;
+}
+.draft .program.diary {
+  position: relative;
+}
+.draft .program.diary::before {
+  background-image: url(../../../img/special/draft2026/illust1.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  content: "";
+  height: 135px;
+  left: -36px;
+  top: 38px;
+  position: absolute;
+  width: 164px;
+}
+.draft .program-title {
+  position: relative;
+}
+.draft .program-head {
+  display: flex;
+}
+.draft .program-icon {
+  margin-right: 10px;
+  width: 60px;
+}
+.draft .program-icon img {
+  width: 100%;
+  height: auto;
+}
+.draft .program-title-text {
+  font-size: 19px;
+  line-height: 1.5;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 10px 0 0;
+  padding-left: 50px;
+  position: relative;
+}
+.draft .program-title-text::before {
+  content: "";
+  display: block;
+  background: url("/img/special/draft2026/icon_columns.png") left top no-repeat;
+  background-size: 100%;
+  height: 42px;
+  margin: 0 10px 0 0;
+  width: 47px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.draft .program-title-sub {
+  color: #660000;
+  font-size: 12px;
+  font-weight: bold;
+}
+.draft .program-title-small {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+}
+.draft .program-title-image {
+  margin: 12px auto 0;
+  width: 72%;
+}
+.draft .program-content {
+  margin: 10px 0 0;
+}
+.draft .program-content-text {
+  font-size: 12px;
+  line-height: 2;
+  margin: 10px 0 0;
+}
+.draft .road_to_draft .program-title-category {
+  font-size: 12px;
+}
+.draft .road_to_draft .program-title-text {
+  font-size: 34px;
+  margin-top: 10px;
+}
+.draft .road_to_draft .program-title-text img {
+  display: inline;
+  margin: 0 5px 5px 0;
+  width: 50px;
+}
+.draft .road_to_draft .program-title-text.diary {
+  font-size: 28px;
+  line-height: 1.1;
+}
+.draft .road_to_draft .program-content {
+  display: flex;
+  margin-top: 30px;
+}
+.draft .road_to_draft .program-title-sub {
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+}
+.draft .road_to_draft .program-title-small {
+  margin-top: 34px;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+.draft .road_to_draft .program-content-visual {
+  flex: 0 0 70px;
+}
+.draft .road_to_draft .program-content-visual img {
+  width: auto;
+}
+.draft .road_to_draft .writer-name {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: bold;
+}
+.draft .road_to_draft .writer-name span {
+  font-size: 12px;
+  font-weight: normal;
+  display: block;
+  margin: 5px 0 0;
+}
+.draft .road_to_draft .program-content-detail {
+  width: auto;
+  margin: 0 0 0 15px;
+}
+.draft .road_to_draft .program-content-caption-text {
+  font-size: 12px;
+  margin-top: 20px;
+}
+.draft .road_to_draft .program-column {
+  margin-top: 40px;
+}
+.draft .road_to_draft .program-column a {
+  color: #fff;
+}
+.draft .road_to_draft .program-column-list {
+  padding: 40px 0;
+  border-top: 1px #fff solid;
+  border-bottom: 1px #fff solid;
+}
+.draft .road_to_draft .program-column-list + li {
+  border-top: 0;
+  border-bottom: 1px #fff solid;
+}
+.draft .road_to_draft .program-column-visual {
+  position: relative;
+}
+.draft .road_to_draft .program-column-visual a {
+  display: block;
+}
+.draft .road_to_draft .program-column-visual a img {
+  width: 100%;
+}
+.draft .road_to_draft .program-column-visual-caption {
+  display: block;
+  margin-top: 0.5em;
+}
+.draft .road_to_draft .program-column-number {
+  background: #ff0000;
+  color: #fff;
+  font-size: 20px;
+  font-style: italic;
+  left: 0;
+  padding: 10px 8px;
+  position: absolute;
+  top: 0;
+}
+.draft .road_to_draft .program-column-number.type2 {
+  background: #ff6500;
+}
+.draft .road_to_draft .program-column-detail {
+  margin: 30px 0 0;
+}
+.draft .road_to_draft .program-column-title {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.draft .road_to_draft .program-column-title dt {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: bold;
+}
+.draft .road_to_draft .program-column-title dd {
+  font-size: 14px;
+  font-weight: normal;
+}
+.draft .road_to_draft .program-column-text {
+  font-size: 15px;
+  line-height: 2;
+  margin: 10px 0 20px;
+}
+.draft .road_to_draft .program-column-link {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.draft .road_to_draft .program-column-link a {
+  position: relative;
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  background: #000;
+  padding: 20px 0;
+}
+.draft .road_to_draft .program-column-link a::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 1.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: translateY(-50%) rotate(45deg);
+}
+.draft .content-text {
+  font-size: 14px;
+  line-height: 1.9;
+}
+.draft .content-bottom {
+  background: #dcd9dc;
+  padding: 15.625vw 20px 9.375vw;
+}
+.draft .content-bottom img {
+  width: 100%;
+}
+.draft .m-sptvLink__title {
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  height: 12.8125vw;
+  background: url(../../../img/sp/special/draft2026/sptv1.png) no-repeat;
+  background-size: 100% auto;
+  position: relative;
+}
+.draft .c-backnumber {
+  border-bottom: 1px solid #333;
+  width: 90.625%;
+  margin: 0 auto;
+  padding: 22px 0 40px;
+}
+.draft .c-backnumber-title {
+  margin-bottom: 40px;
+}
+.draft .c-backnumber-title img {
+  margin: 0 auto;
+}
+.draft .c-backnumber-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6.25vw;
+  margin: auto;
+  justify-content: center;
+  width: 75vw;
+}
+.draft .c-backnumber-list__item {
+  list-style: none;
+  width: calc(50% - 40px);
+}
+.draft .c-backnumber-list__item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  height: 200px;
+  padding: 24px 16px 20px; /* めくれに文字が被らないようtopを少し広めに */
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  /* ベースの角丸（左上・左下・右下はこれが適用されます） */
+  border-radius: 16px;
+  /* 【修正】右上だけをピンポイントで削るグラデーション（左肩には影響しません） */
+  background: linear-gradient(to bottom left, transparent 22px, #f6eed6 23px);
+  /* めくれた三角の裏地部分 */
+}
+.draft .c-backnumber-list__item a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  /* 左下だけに丸みをつけて折り返し感を表現 */
+  border-bottom-left-radius: 12px;
+  /* 本体の角丸と馴染ませるため、右上も少しだけ丸める */
+  border-top-right-radius: 16px;
+  /* 三角形を作るためのグラデーション */
+  background: linear-gradient(to bottom left, transparent 50%, #fbdc7f 50%);
+  filter: drop-shadow(-2px 2px 2px rgba(0, 0, 0, 0.05));
+}
+.draft .c-backnumber-list__item a:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
+.draft .banner-list {
+  align-items: center;
+  background: #fefefe;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 0 auto;
+  padding: 30px 5px;
+  width: 90.625%;
+}
+.draft .banner-list li {
+  display: flex;
+}
+.draft .banner-list li:nth-of-type(odd) {
+  justify-content: flex-end;
+}
+.draft .draft-map {
+  height: 0;
+  margin: 30px 0 7px;
+  padding: 81.375% 0 0;
+  position: relative;
+  width: 100%;
+}
+.draft .draft-map iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.draft .article-column-list {
+  align-items: flex-start;
+  padding: 20px 0;
+}
+.draft .article-column-list:nth-of-type(n + 2) {
+  border-top: 1px solid #fff;
+}
+.draft .article-column-date {
+  align-items: center;
+  display: flex;
+  font-size: 10px;
+}
+.draft .article-column-date::before {
+  content: "";
+  background: url("../../../img/special/draft2026/icon1.png") left top no-repeat;
+  background-size: 25px 25px;
+  height: 25px;
+  margin: 0 14px 0 0;
+  width: 25px;
+}
+.draft .article-column-text {
+  font-size: 16px;
+  margin: 14px 0;
+}
+.draft .article-column-link {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.draft .article-column-link a {
+  position: relative;
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  background: #003333;
+  padding: 20px 0;
+}
+.draft .article-column-link a::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 1.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: translateY(-50%) rotate(45deg);
+}
+.draft .index {
+  border-top: 1px solid #ccc;
+  margin: 0 auto;
+  padding: 15px 4.6875% 25px;
+}
+.draft .index-title {
+  color: #999999;
+  font-size: 14px;
+}
+.draft .index-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2px;
+}
+.draft .index-list-link {
+  color: #ccc;
+  font-size: 12px;
+}
+.draft .index-list-link::before {
+  content: "▼";
+  font-size: 10px;
+  margin-right: 4px;
+}
+.draft .program.special {
+  display: flex;
+  flex-direction: column;
+}
+.draft .special-title img {
+  height: auto;
+  margin: 0 auto 1em;
+  width: 54.5%;
+}
+.draft .special-content,
+.draft .special-image {
+  flex: 1;
+}
+.draft .special-image {
+  max-width: 240px;
+  margin: 0 auto 20px;
+  order: -1;
+}
+.draft .special-lead {
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 15px 0 0;
+}

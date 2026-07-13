@@ -1,0 +1,60 @@
+---
+layout: layouts/base.ejs
+title: 10月23日(木)は運命（ドラフト）の日。2026年プロ野球ドラフト会議特集
+stylesheet: ../../css/special/special_draft2026.css
+---
+
+<div class="draft">
+  <h1 class="top-title">
+    <img alt="2026年プロ野球ドラフト会議" src="../../img/special/draft2026/main-image.jpg" width="1920" height="1098">
+  </h1>
+
+  <div class="content-block head">
+    <%- include('../_includes/contents/draft2026_head-contents') %>
+  </div>
+  <%- include('../_includes/contents/draft2026') %>
+  <%- include('../_includes/contents/backnumber-list') %>
+  <div class="content-bottom">
+    <div class="c-sptv">
+      <a class="c-sptv-link" href="https://promo.skyperfectv.co.jp/guide/?skya=howto" onclick="ga('send', 'event', 'click', 'draft2025_pc');" target="_blank"
+        ><img alt="スカイA見るならスカパー！ スカイAはスカパー！ CS250ch　加入料0円、月額1,529円（税込）、録画OK　お申込み・お問合せはスカイＡ カスタマーセンター　0570-066-250 年中無休（10:00～20:00）　スカイＡはスカパー！、ケーブルテレビ、ひかりTVでご視聴いただけます。　お申込みはこちら" src="../../img/special/draft2025/sptv1.jpg">
+      </a>
+      <%#
+      <a class="c-sptv-link" href="https://promo.skyperfectv.co.jp/guide/ad/plan.html?utm_source=other&utm_medium=display&utm_campaign=ch-250&argument=sfDJpELg&dmai=a688195b848967" target="_blank" rel="noopner"><img src="../../img/bnr/promo_202509/bnr_500_130.jpg" alt="スカパー！基本プラン視聴料最大2ヶ月半額!"></a>
+      %>
+    </div>
+  </div>
+  <%- include('../_includes/contents/banner-list') %>
+  <%- include('../_includes/contents/fixed-banner') %>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const banner = document.getElementById('js-fixed-banner');
+  const closeBtn = document.getElementById('js-banner-close');
+
+  if (!banner || !closeBtn) return;
+
+  // セッションストレージ内の非表示フラグキー名称
+  const storageKey = 'draft_banner_hidden';
+
+  // 1. 初回アクセス or 非表示フラグが立っていないか判定
+  const isHidden = sessionStorage.getItem(storageKey);
+
+  if (!isHidden) {
+  // フラグがなければバナーを表示用クラスを付与
+  banner.classList.add('is-show');
+  }
+
+  // 2. 「×」ボタン押下時のイベント
+  closeBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  // バナーを非表示（クラス削除）
+  banner.classList.remove('is-show');
+
+  // 次回アクセス時（ブラウザまたはタブを閉じるまで）まで非表示にするフラグを保持
+  sessionStorage.setItem(storageKey, 'true');
+  });
+  });
+</script>

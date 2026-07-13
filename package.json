@@ -25,15 +25,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zzzzzz21/skya_draft2025.git"
+    "url": "git+https://github.com/zzzzzz21/skya_draft2026.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zzzzzz21/skya_draft2025/issues"
+    "url": "https://github.com/zzzzzz21/skya_draft2026/issues"
   },
-  "homepage": "https://github.com/zzzzzz21/skya_draft2025#readme",
+  "homepage": "https://github.com/zzzzzz21/skya_draft2026#readme",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@babel/cli": "^7.21.5",

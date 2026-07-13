@@ -1,0 +1,37 @@
+---
+layout: layouts/base_sp.ejs
+title: 10月23日(木)は運命（ドラフト）の日。2026年プロ野球ドラフト会議特集
+stylesheet: /css/sp/special/special_draft2026.css
+javascript: /js/special/draft2026.js
+---
+
+<div class="head-banner"><img alt="" src="https://sky-a.asahi.co.jp/img/sp/global/company_icon.png" /> <span> 特設サイト </span></div>
+<div class="draft">
+  <h1 class="top-title">
+    <img alt="2026年プロ野球ドラフト会議" src="../../img/sp/special/draft2026/main-image.jpg" />
+  </h1>
+
+  <div class="content-block head">
+    <%- include('../_includes/contents/draft2026_head-contents') %>
+  </div>
+  <%- include('../_includes/contents/draft2026') %>
+
+  <%- include('../_includes/contents/backnumber-list') %>
+  <%- include('../_includes/contents/banner-list') %>
+
+  <div class="content-bottom">
+    <div class="c-sptv">
+      <a class="c-sptv-link" href="https://promo.skyperfectv.co.jp/guide/?skya=howto" onclick="ga('send', 'event', 'click', 'draft2025_sp');" target="_blank">
+        <span class="m-sptvLink__title">スカイA見るならスカパー！</span>
+        <img
+          alt="CS250ch　加入料0円、月額1,529円（税込）、録画OK　お申込み・お問合せはスカイＡ カスタマーセンター　0570-066-250 年中無休（10:00～20:00）　スカイＡはスカパー！、ケーブルテレビ、ひかりTVでご視聴いただけます。　お申込みはこちら"
+          src="/img/sp/special/draft2025/sptv2.png"
+        />
+      </a>
+      <%#
+      <a class="c-sptv-link" href="https://promo.skyperfectv.co.jp/guide/ad/plan.html?utm_source=other&utm_medium=display&utm_campaign=ch-250&argument=sfDJpELg&dmai=a688195b848967" target="_blank" rel="noopner"><img src="/img/bnr/promo_202509/bnr_500_130.jpg" alt="スカパー！基本プラン視聴料最大2ヶ月半額!"></a>
+      %>
+    </div>
+  </div>
+<%- include('../_includes/contents/fixed-banner') %>
+</div>

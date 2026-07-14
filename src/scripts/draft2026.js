@@ -26,16 +26,14 @@ window.addEventListener('load', function () {
   })
 });
 
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const wrapper = document.querySelector('.player-carousel-wrapper');
   const track = document.querySelector('.player-cards');
   const cards = document.querySelectorAll('.player-card');
   const prevBtn = document.querySelector('.player-carousel-btn.-prev');
   const nextBtn = document.querySelector('.player-carousel-btn.-next');
+  // 【追加】アンカーリンク要素の取得
+  const navLinks = document.querySelectorAll('.player-navi__link');
 
   if (!track || cards.length === 0) return;
 
@@ -159,14 +157,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // --- 4. 【新規追加】アンカーナビゲーションクリック時の連動処理 ---
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      // 本来のハッシュスクロールを無効化（カルーセルのスライド移動を優先するため）
+      e.preventDefault();
+
+      // data-target-index の値（0, 2, 6 など）を取得
+      const targetIndex = parseInt(link.getAttribute('data-target-index'), 10);
+
+      // 取得したインデックスが有効な範囲内にあるかチェックしてスライド
+      if (!isNaN(targetIndex) && targetIndex >= 0 && targetIndex <= maxIndex) {
+        currentIndex = targetIndex;
+        updateCarousel();
+      }
+    });
+  });
+
   // 画面リサイズ時にズレを補正
   window.addEventListener('resize', updateCarousel);
 
   // 初期化
   updateCarousel();
 });
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
   const banner = document.getElementById('js-fixed-banner');

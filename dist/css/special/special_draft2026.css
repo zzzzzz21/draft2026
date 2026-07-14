@@ -1012,3 +1012,15 @@ div#main {
   line-height: 1.65;
   margin: 15px 0 0;
 }
+
+a[href*="javascript:void(0)"]:hover {
+  opacity: 1 !important;
+  color: inherit !important;
+  background: transparent !important; /* または背景色に合わせる */
+  cursor: default;
+  text-decoration: none;
+}
+
+.player-carousel-btn {
+  display: none;
+}

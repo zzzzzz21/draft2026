@@ -386,7 +386,7 @@ div#main {
 .draft .c-pickup-navi__item .-column p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 4;
   overflow: hidden;
 }
 .draft .c-pickup-navi__item span {

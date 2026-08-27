@@ -650,9 +650,9 @@ div#main {
   .c-moviesList {
     display: flex;
     flex-wrap: wrap;
-    gap: 60px 40px;
+    gap: 60px 20px;
     &__item {
-      width: calc(50% - 40px);
+      width: calc(50% - 20px);
     }
     a {
       &:hover{

@@ -564,10 +564,10 @@ div#main {
 .draft .c-moviesList {
   display: flex;
   flex-wrap: wrap;
-  gap: 60px 40px;
+  gap: 60px 20px;
 }
 .draft .c-moviesList__item {
-  width: calc(50% - 40px);
+  width: calc(50% - 20px);
 }
 .draft .c-moviesList a img {
   margin-bottom: 1.6em;
